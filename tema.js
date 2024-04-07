@@ -78,8 +78,8 @@ const lista = document.getElementById('lista')
 const functia =(list)=>{
     list.forEach((post)=>{
         const el = document.createElement('li')
-        el.innerText = `${post.id} utilizatori['1']`
-        utilizatori.userId = post.userId
+        el.innerText = `${utilizatori[post.userId]}, titlu: ${post.title}`
+        
         lista.appendChild(el)
     })
 }
