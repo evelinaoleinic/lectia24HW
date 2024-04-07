@@ -60,9 +60,27 @@ const utilizatori = {
     '9':'dan',
     '10':'natalia'
 }
-const functia =(data)=>{
-    data.forEach((post)=>{
-    utilizatori.userId = post.userId
+// const functia =(data)=>{
+//     data.forEach((post)=>{
+//     utilizatori.userId = post.userId
+//     })
+// }
+// fetch('https://jsonplaceholder.typicode.com/posts',{
+    
+// })
+// .then((res)=>res.json())
+// .then((data)=>functia(data))
+// .catch((err)=>console.log('ups, eroare', err))
+
+// functia()
+
+const lista = document.getElementById('lista')
+const functia =(list)=>{
+    list.forEach((post)=>{
+        const el = document.createElement('li')
+        el.innerText = `${post.id} utilizatori['1']`
+        utilizatori.userId = post.userId
+        lista.appendChild(el)
     })
 }
 fetch('https://jsonplaceholder.typicode.com/posts',{
@@ -73,5 +91,3 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 .catch((err)=>console.log('ups, eroare', err))
 
 functia()
-
-
