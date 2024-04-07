@@ -62,7 +62,7 @@ const utilizatori = {
 }
 const functia =(data)=>{
     data.forEach((post)=>{
-       const utilizatori = post.userId
+    utilizatori.userId = post.userId
     })
 }
 fetch('https://jsonplaceholder.typicode.com/posts',{
